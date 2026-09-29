@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#e8f2ff">
+	<title>Minha lista de tarefas</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<main class="app">
+		<header class="page-header">
+			<p class="eyebrow">ORGANIZE SEU DIA</p>
+			<h1>Minha lista de tarefas</h1>
+			<p class="subtitle">Um passo de cada vez. O que você precisa fazer?</p>
+		</header>
+
+		<form class="card task-form" id="task-form">
+			<label for="task-input">Nova tarefa</label>
+			<div class="form-row">
+				<input
+					id="task-input"
+					name="task"
+					type="text"
+					placeholder="Ex.: preparar o almoço"
+					autocomplete="off"
+					required
+				>
+				<button class="add-button" type="submit">Adicionar tarefa</button>
+			</div>
+		</form>
+
+		<section class="card tasks-card" aria-labelledby="tasks-heading">
+			<div class="list-heading">
+				<h2 id="tasks-heading">Suas tarefas</h2>
+				<span class="list-note">Salvas nesta sessão</span>
+			</div>
+			<p class="empty-state" id="empty-state">Sua lista está vazia. Adicione uma tarefa para começar.</p>
+			<ul class="task-list" id="task-list" aria-label="Lista de tarefas" aria-live="polite"></ul>
+		</section>
+	</main>
+</body>
+</html>
